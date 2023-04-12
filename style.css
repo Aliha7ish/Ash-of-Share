@@ -103,7 +103,7 @@ a:focus {
   background-repeat: no-repeat;
   height: 140vh;
   position: relative;
-  overflow: clip;
+  overflow-y: clip;
 }
 .shape-group-left {
   transform: translateY(2rem) translateX(-1.5rem);
