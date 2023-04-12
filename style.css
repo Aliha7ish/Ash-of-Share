@@ -90,18 +90,6 @@ a:focus {
 /*****  ******/
 /*****  ******/
 
-.shape {
-  width: 60rem;
-  height: 60rem;
-  top: 30%;
-  left: -25%;
-  border-radius: 50%;
-  /* background-color: #cdcdcd; */
-  border: 0.5px solid #cdcdcd23;
-  position: absolute;
-  z-index: -1;
-}
-
 .outter-container {
   background-image: linear-gradient(
       0deg,
@@ -113,9 +101,48 @@ a:focus {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 130vh;
+  height: 140vh;
   position: relative;
+  overflow: clip;
 }
+.shape-group-left {
+  transform: translateY(2rem) translateX(-1.5rem);
+}
+.shape {
+  width: 50rem;
+  height: 50rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.028);
+  position: absolute;
+  z-index: -1;
+}
+
+.shape--1 {
+  top: 19rem;
+  left: -20rem;
+}
+.shape--2 {
+  top: 30rem;
+  left: 7rem;
+}
+.shape.shape--3 {
+  top: 50rem;
+  left: -18rem;
+}
+
+.shape--1-r {
+  top: -24rem;
+  right: -13.5rem;
+}
+.shape--2-r {
+  top: -4rem;
+  right: -34rem;
+}
+.shape--3-r {
+  top: 13rem;
+  right: -9rem;
+}
+
 .main-header {
   display: flex;
   align-items: center;
@@ -130,7 +157,15 @@ a:focus {
   margin-left: auto;
   display: flex;
   align-items: center;
-  padding: 1.4rem 6.2rem;
+  padding: 1.6rem 8.4rem;
+  border: 1px solid;
+  border-image: linear-gradient(
+      270deg,
+      rgba(252, 196, 77, 0) 0%,
+      #fcc44d 51.86%,
+      rgba(252, 196, 77, 0) 100%
+    )
+    1;
 }
 .nav-links {
   display: flex;
@@ -152,7 +187,7 @@ a:focus {
 /* HERO SECTION */
 
 .hero-section {
-  padding-top: 9.4rem;
+  padding-top: 8.4rem;
 }
 .inner-container {
   display: grid;
@@ -207,7 +242,7 @@ input[type="submit"] {
 }
 /* PERSONAS-CONTAINER */
 .personas-container {
-  margin-top: 1.2rem;
+  margin-top: 1.6rem;
 }
 .persona {
   display: flex;
@@ -218,7 +253,13 @@ input[type="submit"] {
   padding-bottom: 6rem;
   font-size: 1.6rem;
   letter-spacing: 3.5px;
-  border: 1px solid #cdcdcd;
+  border: 0.8px solid;
+  border-image: linear-gradient(
+      322.33deg,
+      #585858 0%,
+      rgba(255, 255, 255, 0) 91.08%
+    )
+    1;
   text-align: center;
   line-height: 1.2;
 }
