@@ -53,6 +53,7 @@ large-whitespace: 6.4rem
 */
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 * {
   margin: 0;
@@ -87,6 +88,43 @@ a:focus {
   outline: none;
 }
 
+/* MOBILE NAV BUTTON */
+.btn-mobile-nav{
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+.open-btn{
+  display: flex;
+  flex-direction: column;
+}
+.close-btn{
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+.claw-1 , .claw-2{
+  transform: rotateX(180deg);
+}
+.claw-2{
+  margin-top: -6px;
+}
+.claw-3{
+  margin-top: 4px;
+}
+
+.close-claw-1{
+  transform: rotate(56deg) rotateX(180deg);
+  position: relative;
+}
+.close-claw-2{
+  position: absolute;
+  transform: rotate(127deg) rotateX(180deg);
+}
+
+
+
 /*****  ******/
 /*****  ******/
 
@@ -101,7 +139,7 @@ a:focus {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 140vh;
+  min-height: 130vh;
   position: relative;
   overflow-y: clip;
 }
@@ -112,7 +150,7 @@ a:focus {
   width: 50rem;
   height: 50rem;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.028);
+  border: 1px solid rgba(255, 255, 255, 0.01);
   position: absolute;
   z-index: -1;
 }
@@ -146,7 +184,9 @@ a:focus {
 .main-header {
   display: flex;
   align-items: center;
-  padding: 3.2rem;
+  padding: 3.2rem 1.6rem;
+  justify-content: space-between;
+  position: relative;
 }
 
 .header-logo {
@@ -154,7 +194,6 @@ a:focus {
 }
 
 .nav-header {
-  margin-left: auto;
   display: flex;
   align-items: center;
   padding: 1.6rem 8.4rem;
@@ -166,6 +205,7 @@ a:focus {
       rgba(252, 196, 77, 0) 100%
     )
     1;
+    /* display: none; */
 }
 .nav-links {
   display: flex;
@@ -178,16 +218,17 @@ a:focus {
 }
 .nav-link:link,
 .nav-link:visited {
+  display: block;
   text-decoration: none;
   color: #cdcdcd;
   letter-spacing: 3.5px;
   text-align: center;
+  width: 100%;
 }
-
 /* HERO SECTION */
 
 .hero-section {
-  padding-top: 8.4rem;
+  padding: 8.4rem 3.2rem;
 }
 .inner-container {
   display: grid;
@@ -195,9 +236,8 @@ a:focus {
   justify-items: center;
   row-gap: 3.6rem;
   margin: 0 auto;
-  max-width: fit-content;
+  width: fit-content;
 }
-
 .hero-img {
   width: 55rem;
   margin: 0 auto;
@@ -210,6 +250,7 @@ a:focus {
   text-align: center;
   font-weight: 500;
   letter-spacing: 6.5px;
+  line-height: 1.4;
 }
 .hero-form {
   display: flex;
@@ -224,7 +265,8 @@ a:focus {
   border: 1px solid #fcc44d;
   border-radius: 100px;
   width: 100%;
-  padding: 1.2rem 0;
+  height: 4.5rem;
+  /* padding: 1.2rem 0; */
   color: #cdcdcd;
   text-indent: 1.6rem;
   font-size: 1.6rem;
@@ -248,7 +290,7 @@ input[type="submit"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.8rem;
+  gap: 3.2rem;
   padding: 3rem 0.8rem;
   padding-bottom: 6rem;
   font-size: 1.6rem;
@@ -268,7 +310,7 @@ input[type="submit"] {
   width: 7.5rem;
 }
 .persona-name {
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 .persona-skill {
   font-family: "gilroylight";
