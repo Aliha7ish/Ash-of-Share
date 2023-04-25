@@ -91,7 +91,8 @@ a:focus {
   outline: none;
 }
 
-.noSelect, a{
+.noSelect,
+a {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -100,7 +101,8 @@ a:focus {
   -ms-user-select: none;
   user-select: none;
 }
-.noSelect:focus, a:focus {
+.noSelect:focus,
+a:focus {
   outline: none !important;
 }
 
@@ -311,13 +313,18 @@ a:focus {
 }
 
 .search-bar:-webkit-autofill,
-.search-bar:-webkit-autofill:hover, 
-.search-bar:-webkit-autofill:focus {
+.search-bar:-webkit-autofill:hover,
+.search-bar:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
   -webkit-text-fill-color: #cdcdcd;
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in-out 0s;
 }
-
 
 input[type="submit"] {
   color: #fcc44d;
