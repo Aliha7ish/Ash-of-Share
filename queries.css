@@ -52,12 +52,12 @@
   }
   .nav-open .open-btn .claw-1 {
     animation-name: close__btn-c1;
-    animation-duration: 300ms;
+    animation-duration: 500ms;
     animation-fill-mode: forwards;
   }
   .nav-open .open-btn .claw-2 {
     animation-name: close__btn-c2;
-    animation-duration: 300ms;
+    animation-duration: 500ms;
     animation-fill-mode: forwards;
   }
   .nav-open .claw-3{
