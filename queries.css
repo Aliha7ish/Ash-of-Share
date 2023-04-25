@@ -35,20 +35,33 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    
+    animation-name: NavHeaderClose;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+    backface-visibility: hidden;
   }
   .nav-open .nav-header {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-  .nav-open .close-btn {
-    display: flex;
+    animation-name: NavHeaderOpen;
+    animation-duration: 600ms;
+    animation-fill-mode: forwards;
+    backface-visibility: hidden;
   }
   .nav-open .open-btn {
-    display: none;
+    transform: translateY(15px);
+  }
+  .nav-open .open-btn .claw-1 {
+    animation-name: close__btn-c1;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+  }
+  .nav-open .open-btn .claw-2 {
+    animation-name: close__btn-c2;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+  }
+  .nav-open .claw-3{
+    opacity: 0;
   }
   .nav-links {
     flex-direction: column;
@@ -67,12 +80,13 @@
   .nav-links li:nth-child(2) {
     border-bottom: 1px solid;
     border-image: linear-gradient(
-      90deg,
-      #d2a444 0%,
-      rgba(210, 164, 68, 0) 85.4%
-    ) 1;
+        90deg,
+        #d2a444 0%,
+        rgba(210, 164, 68, 0) 85.4%
+      )
+      1;
   }
-  .nav-links li{
+  .nav-links li {
     width: 100%;
   }
 }
@@ -200,7 +214,6 @@
   }
   .hero-text {
     letter-spacing: 1.5px;
-    
   }
   .header-logo {
     width: 12rem;
@@ -208,7 +221,7 @@
   .nav-links {
     padding-top: 5.4rem;
   }
-  .nav-header{
+  .nav-header {
     width: 70%;
   }
 }

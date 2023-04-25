@@ -55,6 +55,9 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
+::selection {
+  color: #fcc44d;
+}
 * {
   margin: 0;
   padding: 0;
@@ -89,41 +92,72 @@ a:focus {
 }
 
 /* MOBILE NAV BUTTON */
-.btn-mobile-nav{
+.btn-mobile-nav {
   background: none;
   border: none;
   cursor: pointer;
   display: none;
 }
-.open-btn{
+.open-btn {
   display: flex;
   flex-direction: column;
 }
-.close-btn{
-  display: flex;
-  flex-direction: column;
-  display: none;
-}
-.claw-1 , .claw-2{
+.claw-1,
+.claw-2 {
   transform: rotateX(180deg);
 }
-.claw-2{
+.claw-2 {
   margin-top: -6px;
 }
-.claw-3{
+.claw-3 {
   margin-top: 4px;
 }
 
-.close-claw-1{
+@keyframes close__btn-c1 {
+  0% {
+    transform: rotate(0) rotateX(0);
+  }
+  100% {
+    transform: rotate(56deg) rotateX(180deg);
+  }
+}
+@keyframes close__btn-c2 {
+  0% {
+    transform: rotate(0) rotateX(0);
+  }
+  100% {
+    transform: rotate(127deg) rotateX(180deg) translateY(-4px) translateX(-3px);
+  }
+}
+@keyframes NavHeaderOpen {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+@keyframes NavHeaderClose {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+/* .close-claw-1{
   transform: rotate(56deg) rotateX(180deg);
   position: relative;
 }
 .close-claw-2{
   position: absolute;
   transform: rotate(127deg) rotateX(180deg);
-}
-
-
+} */
 
 /*****  ******/
 /*****  ******/
@@ -150,9 +184,9 @@ a:focus {
   width: 50rem;
   height: 50rem;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.03);
   position: absolute;
-  z-index: -1;
+  pointer-events: none;
 }
 
 .shape--1 {
@@ -205,7 +239,7 @@ a:focus {
       rgba(252, 196, 77, 0) 100%
     )
     1;
-    /* display: none; */
+  /* display: none; */
 }
 .nav-links {
   display: flex;
@@ -259,6 +293,7 @@ a:focus {
   justify-content: center;
   width: 100%;
   gap: 1.8rem;
+  /* background-color: aqua; */
 }
 .search-bar {
   background-color: transparent;
@@ -270,6 +305,8 @@ a:focus {
   color: #cdcdcd;
   text-indent: 1.6rem;
   font-size: 1.6rem;
+  min-width: 100%;
+  /* background-color: red; */
 }
 input[type="submit"] {
   color: #fcc44d;
