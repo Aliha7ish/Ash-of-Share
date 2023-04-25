@@ -55,9 +55,7 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
-::selection {
-  color: #fcc44d;
-}
+
 * {
   margin: 0;
   padding: 0;
@@ -106,6 +104,10 @@ a:focus {
   outline: none !important;
 }
 
+::selection {
+  color: #fcc44d;
+}
+
 /* MOBILE NAV BUTTON */
 .btn-mobile-nav {
   background: none;
@@ -141,7 +143,7 @@ a:focus {
     transform: rotate(0) rotateX(0);
   }
   100% {
-    transform: rotate(130deg) rotateX(180deg) translateY(-4px) translateX(-5px);
+    transform: rotate(125deg) rotateX(180deg) translateY(-4px) translateX(-5px);
   }
 }
 @keyframes NavHeaderOpen {
@@ -370,4 +372,7 @@ input[type="submit"] {
 .persona-skill {
   font-family: "gilroylight";
   color: #fcc44d;
+}
+.persona-skill::selection{
+  color: #cdcdcd;
 }
